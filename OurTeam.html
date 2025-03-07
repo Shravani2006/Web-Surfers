@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color:  #ff8c00;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .logo {
+            width: 100px;
+        }
+        .header h1 {
+            flex-grow: 1;
+            text-align: center;
+            margin: 0;
+            color: black;
+        }
+        .highlight {
+            color: #ff8c00;
+            font-weight: bold;
+        }
+        .teams {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .team {
+            background-color: #222;
+            padding: 10px;
+            border-radius: 10px;
+            width: 250px;
+            height: 350px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .team:hover {
+            background-color: #ff8c00;
+            color: black;
+        }
+        .team img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+            color: orange;
+        }
+        nav {
+            background: #222;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #FFA500;
+            text-decoration: none;
+            margin: 10px 15px;
+            font-size: 18px;
+            transition: 0.3s;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            bottom: -5px;
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        nav a:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="header">
+            <img src="https://github.com/AarushBorkar/CRESA_CCanvas/blob/main/logos/WhatsApp%20Image%202025-03-06%20at%2023.34.09.jpeg?raw=true" alt="Logo" class="logo">
+            <h1>Meet Our Dynamic Teams</h1>
+
+        </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="OurTeam.html">Our Teams</a>
+                <a href="event.html">Events</a>
+                <a href="event.html">Achievements & Impact</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        
+        
+        <p><strong>Discover a powerhouse of <span class="highlight">7 specialized teams</span>, each driving innovation and excellence!</strong></p>
+
+        <div class="teams">
+            <div class="team" onclick="toggleDetails('management')">
+                <img src="https://media.istockphoto.com/id/1409520341/photo/group-of-young-people-discussing-in-the-co-working-office.webp?a=1&b=1&s=612x612&w=0&k=20&c=P4YjC3AEogPzkRnpta_IFFr2Pa5idqqU11-neJx_Ars=" alt="Management Team">
+                <h2>Management Team</h2>
+                <p id="management" class="details">Handles logistics, planning, and operations.</p>
+            </div>
+            <div class="team" onclick="toggleDetails('design')">
+                <img src="https://media.istockphoto.com/id/495193237/photo/multiethnic-group-of-people-planning-ideas.jpg?s=612x612&w=0&k=20&c=uybWH47wW_DKuzXz5j6FF6yLb8hGzoFv3o-KYSUpfTQ=" alt="Design Team">
+                <h2>Design Team</h2>
+                <p id="design" class="details">Manages branding, graphics, and UI/UX.</p>
+            </div>
+            <div class="team" onclick="toggleDetails('cultural')">
+                <img src="https://cdn.pixabay.com/photo/2022/06/15/21/48/star-7264632_640.jpg" alt="Cultural Team">
+                <h2>Cultural Team</h2>
+                <p id="cultural" class="details">Organizes social and cultural events.</p>
+            </div>
+            <div class="team" onclick="toggleDetails('socialmedia')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxwjnIqQm_SAVCIcnXj6sAhaCQAeEQSF0e-g&s" alt="Social Media Team">
+                <h2>Social Media Team</h2>
+                <p id="socialmedia" class="details">Manages online presence and promotions.</p>
+            </div>
+            <div class="team" onclick="toggleDetails('finance')">
+                <img src="https://staging.herovired.com/wp-content/uploads/2023/03/Finance-Manager-Salary-in-India-in-2023.webp" alt="Finance Team">
+                <h2>Finance Team</h2>
+                <p id="finance" class="details">Handles budgeting and sponsorships.</p>
+            </div>
+            <div class="team" onclick="toggleDetails('sports')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxp1KK8ycopnxmer28Ur75opztwmmTzHWPzw&s" alt="Sports Team">
+                <h2>Sports Team</h2>
+                <p id="sports" class="details">Organizes sports events and competitions.</p>
+            </div>
+            <div class="team" onclick="toggleDetails('core')">
+                <img src="https://www.shutterstock.com/image-vector/group-businesspeople-joining-together-gears-600nw-236187757.jpg" alt="Core Team">
+                <h2>Core Team</h2>
+                <p id="core" class="details">Oversees decision-making and overall strategy.</p>
+            </div>
+        </div>
+        <p><strong>Every team is a force of <span class="highlight">3-5 passionate members</span>, guided by an inspiring <span class="highlight">Senior Head</span>!</strong></p>
+
+    </div>
+    
+    <script>
+        function toggleDetails(id) {
+            var element = document.getElementById(id);
+            element.style.display = (element.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
